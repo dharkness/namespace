@@ -3,14 +3,14 @@ an Erlang inspired method for organizing functions
 
 Simple example
 
-    (function(){
+    (function() {
       namespace("example", public);
     
-      function private(){ return "private" };
-      function public(){ private(); };
+      function private() { return "private"; };
+      function public() { return private(); };
     }());
     
-    example.public() // -> "private"
+    example.public(); // -> "private"
 
 
 See http://jweir.github.com/namespace for documentation
